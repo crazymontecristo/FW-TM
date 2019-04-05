@@ -18,8 +18,8 @@ head(word.freqs)
 
 write.csv(word.freqs, "cnd-word-freqs.csv" )
 
-topic.model$setAlphaOptimization(20, 40)
-topic.model$train(6000)
+topic.model$setAlphaOptimization(10, 20)
+topic.model$train(1000)
 doc.topics <- mallet.doc.topics(topic.model, smoothed=T, normalized=T)
 topic.words <- mallet.topic.words(topic.model, smoothed=T, normalized=T)
 
